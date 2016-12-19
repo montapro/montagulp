@@ -1,16 +1,22 @@
 {
-  "name": "test",
+  "name": "montagulp",
   "version": "1.0.0",
-  "description": "Testumgebung für Gulp",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "description": "Frontend Gulp Boilerplate",
+  "main": "gulpfile.js",
+  "author": "Markus Krause <montapro>",
+  "license": "Markus Krause <montapro>",
   "devDependencies": {
+    "browser-sync": "^2.18.5",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.0.0",
-    "gulp-sourcemaps": "^1.9.1"
-  }
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/montapro/montagulp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/montapro/montagulp/issues"
+  },
+  "homepage": "https://github.com/montapro/montagulp#readme"
 }
