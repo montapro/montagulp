@@ -1,0 +1,17 @@
+{
+  "name": "montagulp",
+  "description": "Frontend Gulp Boilerplate",
+  "main": "gulpfile.js",
+  "authors": [
+    "Markus Krause <montapro>"
+  ],
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/montapro/montagulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

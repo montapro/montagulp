@@ -19,7 +19,7 @@ gulp.task('styles', function () {
             cascade: true
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dist'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -30,7 +30,7 @@ gulp.task('scripts', function() {
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./dist'));
 });
 
 
