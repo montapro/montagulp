@@ -6,7 +6,7 @@ const sass = require('gulp-sass');
 const autoPrefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
-const browserSync = require('browser-sync');
+// const browserSync = require('browser-sync');
 
 
 
@@ -20,7 +20,7 @@ gulp.task('styles', function () {
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./dist'))
-        .pipe(browserSync.reload({stream: true}));
+        // .pipe(browserSync.reload({stream: true}));
 });
 
 
@@ -36,16 +36,16 @@ gulp.task('scripts', function() {
 
 
 gulp.task('serve', function () {
-    browserSync.init({
-        server: {
-            baseDir: './',
-            proxy: 'http://ambicon:8888'
-        }
-    });
+    // browserSync.init({
+    //     server: {
+    //         baseDir: './',
+    //         proxy: 'http://ambicon:8888'
+    //     }
+    // });
     gulp.watch('./src/scss/*.scss', ['styles']);
     gulp.watch('./src/js/*.js', ['scripts']);
-    gulp.watch('./**/*.html').on('change', browserSync.reload);
-    gulp.watch('./**/*.php').on('change', browserSync.reload);
+    // gulp.watch('./**/*.html').on('change', browserSync.reload);
+    // gulp.watch('./**/*.php').on('change', browserSync.reload);
 });
 
 
