@@ -6,12 +6,15 @@ const sass = require('gulp-sass');
 const autoPrefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
-// const browserSync = require('browser-sync');
 
-
+paths = {
+    srcStyles: './scss/',
+    srcScripts: './js/',
+    dist: '../dist'
+};
 
 gulp.task('styles', function () {
-    gulp.src('./src/scss/main.scss')
+    gulp.src(paths.srcStyles + 'main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoPrefixer({
@@ -19,33 +22,24 @@ gulp.task('styles', function () {
             cascade: true
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./dist'))
-        // .pipe(browserSync.reload({stream: true}));
+        .pipe(gulp.dest(paths.dist));
 });
 
 
 
 gulp.task('scripts', function() {
-    gulp.src('./src/js/main.js')
+    gulp.src(paths.srcScripts + 'main.js')
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest(paths.dist));
 });
 
 
 
 gulp.task('serve', function () {
-    // browserSync.init({
-    //     server: {
-    //         baseDir: './',
-    //         proxy: 'http://ambicon:8888'
-    //     }
-    // });
-    gulp.watch('./src/scss/*.scss', ['styles']);
-    gulp.watch('./src/js/*.js', ['scripts']);
-    // gulp.watch('./**/*.html').on('change', browserSync.reload);
-    // gulp.watch('./**/*.php').on('change', browserSync.reload);
+    gulp.watch(paths.srcStyles + '*.scss', ['styles']);
+    gulp.watch(paths.srcScripts + '*.js', ['scripts']);
 });
 
 
