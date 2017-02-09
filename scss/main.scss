@@ -1,4 +1,10 @@
-body {
-  background-color: white;
-  color: black;
-}
+@import '../dist/bower_components/normalize-css/normalize.css';
+@import '../dist/bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../dist/bower_components/sass-mediaqueries/media-queries';
+
+@import 'modules/variables';
+@import 'modules/mixins';
+
+@import 'partials/base';
+@import 'partials/typography';
+@import 'partials/pagination';

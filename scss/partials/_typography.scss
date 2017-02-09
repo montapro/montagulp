@@ -1,0 +1,19 @@
+html {
+  font: {
+    size: 100%;
+  }
+}
+
+body {
+  color: $color-gray;
+
+  font: {
+    family: 'Open Sans', sans-serif;
+    size: 1.3125rem;
+    weight: 300;
+  }
+
+  line-height: 1.5;
+
+  @include font-smoothing();
+}

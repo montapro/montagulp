@@ -1,0 +1,55 @@
+// pagination
+.pagination {
+  width: 100%;
+
+
+  @include flexin(row,flex-start,flex-end);
+  flex-wrap: wrap;
+  align-content: flex-end;
+
+  .MarkupPagerNav {
+    clear: both;
+    padding: 3rem 1rem;
+    margin: 0;
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    li {
+      display: inline;
+      list-style: none;
+      margin: 0;
+
+      a,
+      &.MarkupPagerNavSeparator {
+        display: block;
+        float: left;
+        padding: 4px 8px;
+        color: $color-gray;
+        margin-right: 5px;
+        font-size: 1rem;
+      }
+
+      &.MarkupPagerNavOn a,
+      a:hover {
+        color: $color-ci;
+        border-color: $color-gray;
+        text-decoration: none;
+      }
+
+      &.MarkupPagerNavOn a {
+      }
+
+      &.MarkupPagerNavSeparator {
+        display: inline;
+        color: #777;
+        background: $color-gray;
+        padding-left: 3px;
+        padding-right: 3px;
+      }
+    }
+  }
+}

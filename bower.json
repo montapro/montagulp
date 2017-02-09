@@ -22,6 +22,7 @@
     "scrollreveal": "^3.3.2",
     "flexibility": "^2.0.1",
     "remodal": "^1.1.1",
-    "barba.js": "luruke/barba.js#^1.0.0"
+    "barba.js": "luruke/barba.js#^1.0.0",
+    "neat": "^1.8.0"
   }
 }

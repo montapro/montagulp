@@ -1,0 +1,28 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.tablet-hidden {
+  @include max-screen($screen-tablet) {
+    display: none;
+  }
+}
+
+.mobile-hidden {
+  @include max-screen($screen-mobile) {
+    display: none;
+  }
+}
