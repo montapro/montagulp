@@ -38,8 +38,8 @@ gulp.task('scripts', function() {
 
 
 gulp.task('serve', function () {
-    gulp.watch(paths.srcStyles + '*.scss', ['styles']);
-    gulp.watch(paths.srcScripts + '*.js', ['scripts']);
+    gulp.watch(paths.srcStyles + '/**/*.scss', ['styles']);
+    gulp.watch(paths.srcScripts + '/**/*.js', ['scripts']);
 });
 
 
