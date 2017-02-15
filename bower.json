@@ -23,6 +23,7 @@
     "flexibility": "^2.0.1",
     "remodal": "^1.1.1",
     "barba.js": "luruke/barba.js#^1.0.0",
-    "neat": "^1.8.0"
+    "neat": "^1.8.0",
+    "css-hamburgers": "^0.7.0"
   }
 }
